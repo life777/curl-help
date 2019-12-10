@@ -3,13 +3,13 @@
 |Flag|Description|
 |--|--|
 |[-d (--data)](#add-post-data-to-request)|Data. Includes data in POST request|
-|-b (--cookie)|Pass data in cookie header|
-|-c (--cookie-jar)|Save cookie in file|
+|[-b (--cookie)](#set-cookie)|Pass data in cookie header|
+|[-c (--cookie-jar)](#save-cookie)|Save cookie in file|
 |--dns-ipv4-addr|Tell curl to bind to set address|
 |--dns-ipv6-addr|Tell curl to bind to set address|
 |-f (--form)|Pretend that user submit a form|
 |-I (--head)|HEAD http method to get only headers|
-|-H (--header)|Add header to request|
+|[-H (--header)](#add-header)|Add header to request|
 |--http1.1|Use HTTP1.1|
 |--http2|Use HTTP2|
 |-v (--verbose)|See all headers and responses|
@@ -25,4 +25,16 @@
 
 ### Add POST data to request
 
-`curl -d a=1 -d b=2 -d @filename --data-raw email=hello@gmail.com --data-binary @filename1`
+`curl -d a=1 -d b=2 -d @filename --data-raw email=hello@gmail.com --data-binary @filename1 info.cern.ch`
+
+### Set cookie
+
+`curl -b hello=1 info.cern.ch`
+
+### Save cookie
+
+`curl -c cookie.txt info.cern.ch`
+
+### Add header
+
+`curl -H "X-Content: SomeContent" info.cern.ch`
