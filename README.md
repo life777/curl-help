@@ -7,8 +7,6 @@
 |[-X (--request)](#custom-request)|Users custom method to be requested|
 |[-b (--cookie)](#set-cookie)|Pass data in cookie header|
 |[-c (--cookie-jar)](#save-cookie)|Save cookie in file|
-|--dns-ipv4-addr|Tell curl to bind to set address|
-|--dns-ipv6-addr|Tell curl to bind to set address|
 |-f (--form)|Pretend that user submit a form|
 |[-I (--head)](#head-request)|HEAD http method to get only headers|
 |[-H (--header)](#add-header)|Add header to request|
@@ -22,6 +20,7 @@
 |--interface |Use specific interface to connect|
 |-L (--location)|Follow the redirect response|
 |-o (--output)|Save output in file|
+|-A (--user-agent)|Sets user agent to request|
 
 [] and {} can be used in URL:
 
